@@ -3,14 +3,14 @@ const { Navbar, Dropdown, Avatar } = require("flowbite-react");
 export default function NavigationBar() {
   return (
     <Navbar fluid={true} rounded={true}>
-      <Navbar.Brand href="https://flowbite.com/">
+      <Navbar.Brand href="https://github.com/rifqiahmadpratama">
         <img
-          src="https://flowbite.com/docs/images/logo.svg"
+          src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-github-1.png"
           className="mr-3 h-6 sm:h-9"
           alt="Flowbite Logo"
         />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          Flowbite
+          Github
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
@@ -20,7 +20,7 @@ export default function NavigationBar() {
           label={
             <Avatar
               alt="User settings"
-              img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+              img="https://avatars.githubusercontent.com/u/72550248?v=4"
               rounded={true}
             />
           }
@@ -28,7 +28,7 @@ export default function NavigationBar() {
           <Dropdown.Header>
             <span className="block text-sm">Bonnie Green</span>
             <span className="block truncate text-sm font-medium">
-              name@flowbite.com
+              rifqiahmad234a@gmail.com
             </span>
           </Dropdown.Header>
           <Dropdown.Item>Dashboard</Dropdown.Item>

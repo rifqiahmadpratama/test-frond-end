@@ -5,13 +5,16 @@ import { Avatar, Card } from "flowbite-react";
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image.js";
 import { getHome } from "../redux/action/homeaction.js";
+import { getRepo } from "../redux/action/repoaction.js";
 
 export default function Home() {
   const dispatch = useDispatch();
   const { home } = useSelector((state) => state.home);
-  console.log("cek data = ", home);
+  const { repo } = useSelector((state) => state.repo);
+  console.log("cek data = ", repo);
   useEffect(() => {
     dispatch(getHome());
+    dispatch(getRepo());
   }, []);
 
   return (
@@ -27,15 +30,16 @@ export default function Home() {
             </div>
           </Card>
         </div>
-        <div class="grow h-screen bg-emerald-400 p-4">
-          <Card class="h-screen" href="#">
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
-            </h5>
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-            </p>
+        <div class="grow h-screen overflow-scroll bg-emerald-400 p-4">
+          <Card class="h-full" href="#">
+            {repo.map((item) => (
+              <div class="h-full " key={item.id}>
+                <Card href={item.html_url}>
+                  <h1>{item.name}</h1>
+                  <h1>{item.full_name}</h1>
+                </Card>
+              </div>
+            ))}
           </Card>
         </div>
       </div>
