@@ -26,7 +26,7 @@ export default function NavigationBar() {
           }
         >
           <Dropdown.Header>
-            <span className="block text-sm">Bonnie Green</span>
+            <span className="block text-sm">Rifqi Ahmad Pratama</span>
             <span className="block truncate text-sm font-medium">
               rifqiahmad234a@gmail.com
             </span>
@@ -40,13 +40,10 @@ export default function NavigationBar() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="/navbars" active={true}>
+        <Navbar.Link href="https://github.com/rifqiahmadpratama" active={true}>
           Home
         </Navbar.Link>
-        <Navbar.Link href="/navbars">About</Navbar.Link>
-        <Navbar.Link href="/navbars">Services</Navbar.Link>
-        <Navbar.Link href="/navbars">Pricing</Navbar.Link>
-        <Navbar.Link href="/navbars">Contact</Navbar.Link>
+        <Navbar.Link href="https://wa.me/6282120531932">Contact</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
